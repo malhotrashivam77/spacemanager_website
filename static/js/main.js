@@ -74,3 +74,24 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+
+// Video scroll effect
+const videoSection = document.querySelector('.video-container');
+const videoWrapper = document.querySelector('.video-wrapper');
+
+window.addEventListener('scroll', () => {
+    if (!videoSection || !videoWrapper) return;
+
+    const sectionRect = videoSection.getBoundingClientRect();
+    const scrollProgress = 1 - (sectionRect.bottom / (window.innerHeight + sectionRect.height));
+    
+    if (scrollProgress >= 0 && scrollProgress <= 1) {
+        // Calculate width based on scroll progress (80% to 100%)
+        const width = 80 + (scrollProgress * 40);
+        videoWrapper.style.width = `${width}%`;
+        
+        // Adjust border radius
+        const borderRadius = 20 - (scrollProgress * 20);
+        videoWrapper.style.borderRadius = `${borderRadius}px`;
+    }
+});

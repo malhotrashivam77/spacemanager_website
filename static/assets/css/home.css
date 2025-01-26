@@ -781,9 +781,26 @@ textarea.form-control {
 
 /* Footer Styles */
 .footer {
-    background-color: #1A1A1A;
-    color: #fff;
+    background-color: #F0EADD;
+    color: #000000;
     padding: 80px 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background-image: url('/static/assets/footerpng.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 1;
+    opacity: 0.15;
 }
 
 .footer-content {
@@ -791,6 +808,8 @@ textarea.form-control {
     grid-template-columns: 2fr 1fr 1fr 2fr;
     gap: 40px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-brand {
@@ -803,7 +822,7 @@ textarea.form-control {
 }
 
 .footer-description {
-    color: #999;
+    color: #525252;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -822,7 +841,7 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #7a0000;
     transition: all 0.3s ease;
 }
 
@@ -832,7 +851,7 @@ textarea.form-control {
 }
 
 .footer-links h4 {
-    color: #fff;
+    color: #484848;
     font-size: 1.1rem;
     margin-bottom: 20px;
     font-weight: 600;
@@ -859,7 +878,7 @@ textarea.form-control {
 }
 
 .footer-contact h4 {
-    color: #fff;
+    color: #484848;
     font-size: 1.1rem;
     margin-bottom: 20px;
     font-weight: 600;
@@ -883,6 +902,8 @@ textarea.form-control {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-bottom p {
@@ -920,6 +941,10 @@ textarea.form-control {
     
     .footer {
         padding: 50px 0 20px;
+    }
+
+    .footer::after {
+        display: none;
     }
 }
 
@@ -1192,4 +1217,71 @@ textarea.form-control {
 
 .scrolled .navbar-dark .navbar-nav .nav-link:hover {
     color: #000000;
+}
+
+/* Video Section Styles */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.video-wrapper {
+    position: relative; /* Changed from fixed to relative */
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto; /* Center the wrapper */
+    transition: all 0.3s ease;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 100%;
+}
+
+.video-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.video-content p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .video-container {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .video-wrapper {
+        width: 90%;
+        height: 60vh;
+    }
+
+    .video-content h2 {
+        font-size: 2rem;
+    }
+
+    .video-content p {
+        font-size: 1rem;
+    }
 }
