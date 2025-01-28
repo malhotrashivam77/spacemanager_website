@@ -1493,3 +1493,60 @@ textarea.form-control {
         font-size: 2.2rem;
     }
 }
+
+
+.cta-section {
+    background-color: #333;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.cta-section p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #660000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+}
