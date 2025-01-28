@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Manager | Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/service.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <div class="container">
+            <a class="navbar-brand " href="#"><img src="{{ url_for('static', filename='assets/logo.png') }}"
+                    alt="spacemanger_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><button
+                                class="hero-button btn btn-light btn-lg" style="border-radius: 20px;">Get a
+                                Consultation</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Designing Spaces That Reflect Your Vision</h1>
+                <p class="lead">Partner with us for end-to-end construction services. From innovative designs to
+                    impeccable finishes, we bring expertise and care to every step of your project.</p>
+                <a href="#contact" class="hero-button btn btn-light btn-lg">Start Building Your Dream</a>
+            </div>
+        </div>
+    </section>
+    <div class="landing-page">
+        <!-- <div class="container"> -->
+
+
+        <section id="intro-section" class="intro-container py-5 my-5">
+            <div class="main-container">
+                <div class="row align-items-center">
+                    <!-- Left Side: Image -->
+                    <div class="intro-section-heading col-md-6">
+                        <img src="{{ url_for('static', filename='assets/images/service/1.png') }}"
+                            alt="Modern Building Design" class="img-fluid">
+                    </div>
+                    <!-- Right Side: Content -->
+                    <div class="col-md-6">
+                        <h2>Where Innovation Meets Functionality</h2>
+                        <p class="intro-text">Your space is more than just walls and floors—it's a canvas for
+                            creativity, functionality, and purpose.</p>
+                        <p class="intro-text">At Space Manager, our innovative architectural design services turn your
+                            ideas into beautiful, sustainable, and high-performing spaces.</p>
+                        <p class="intro-text">Whether it's a home, office, or commercial project, we focus on pushing
+                            design boundaries to create something extraordinary.</p>
+                        <div class="intro-image mt-4">
+                            <img src="{{ url_for('static', filename='assets/images/service/2.png') }}"
+                                alt="Architectural Design Process" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="journey-section">
+            <div class="container">
+                <div class="journey-header">
+                    <h2>We Guiding You Through Every Step of the Journey</h2>
+                    <p>Imagine walking into a space that feels 'just right.' That's the power of great design. We're here to make sure you experience it firsthand.</p>
+                    <a href="#contact" class="consultation-btn">Book a Free Consultation</a>
+                </div>
+                
+                <div class="journey-cards">
+                    <div class="journey-card">
+                        <img src="{{ url_for('static', filename='assets/images/service/listen.jpeg') }}" alt="We Listen">
+                        <div class="journey-card-content">
+                            <h3>We Listen</h3>
+                            <p>Your ideas, needs, and lifestyle become the foundation of our design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card">
+                        <img src="{{ url_for('static', filename='assets/images/service/create.jpeg') }}" alt="We Create">
+                        <div class="journey-card-content">
+                            <h3>We Create</h3>
+                            <p>Our team develops innovative concepts tailored to your goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card">
+                        <img src="{{ url_for('static', filename='assets/images/service/deliver.jpeg') }}" alt="We Deliver">
+                        <div class="journey-card-content">
+                            <h3>We Deliver</h3>
+                            <p>From blueprints to execution support, we ensure the design comes to life seamlessly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats-section" class="stats px-5 bg-light">
+            <div class="main-container text-center">
+                <div class="recognition-section container text-center">
+                    <h2>Our Proven Process for Exceptional Design</h2>
+                    <p class="recognition-subtitle">
+                        Designing your dream space should be exciting, not stressful. Our clear process
+                        ensures you enjoy every step with confidence.
+                    </p>
+                </div>
+                <div class="row">
+                    <!-- Discovery Call -->
+                    <div class="col-md-3 text-center">
+                        <div class="process-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Discovery Call</h4>
+                        <p>We sit down with you to deeply understand your needs, goals, and style preferences.</p>
+                    </div>
+                    <!-- Design Visualization -->
+                    <div class="col-md-3 text-center">
+                        <div class="process-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Design Visualization</h4>
+                        <p>We craft innovative ideas and provide 3D renders so you can 'see' it first.</p>
+                    </div>
+                    <!-- Feedback & Refinement -->
+                    <div class="col-md-3 text-center">
+                        <div class="process-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Feedback & Refinement</h4>
+                        <p>We fine-tune every detail until it aligns perfectly with your expectations.</p>
+                    </div>
+                    <!-- Final Delivery & Support -->
+                    <div class="col-md-3 text-center">
+                        <div class="process-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Final Delivery & Support</h4>
+                        <p>Detailed plans and execution-ready designs, ensuring the process runs smoothly.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#contact" class="btn btn-primary" style="background-color: #8B0000; border: none; border-radius: 25px; padding: 10px 30px; margin-bottom: 100px;">Let's Design Together</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2>Why Trust Us with Your Dream Space?</h2>
+                        <p>We don't just design spaces—we craft lasting experiences. By blending creativity, functionality, and your vision, we deliver designs that are truly one of a kind.</p>
+                        
+                        <div class="trust-features">
+                            <div class="trust-feature">
+                                <div class="trust-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="trust-content">
+                                    <h3>Impeccable Craftsmanship</h3>
+                                    <p>Quality and luxury define our work. From furniture to accessories, we leave no detail untouched.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-feature">
+                                <div class="trust-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="trust-content">
+                                    <h3>Periodic Site Reviews</h3>
+                                    <p>We stay involved throughout the project, ensuring excellence at every stage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-feature">
+                                <div class="trust-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="trust-content">
+                                    <h3>Client-First Approach</h3>
+                                    <p>Your vision guides our work; we're partners, not just designers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-feature">
+                                <div class="trust-icon">
+                                    <i class="fas fa-rupee-sign"></i>
+                                </div>
+                                <div class="trust-content">
+                                    <h3>Transparent Costs</h3>
+                                    <p>No surprises. Our pricing is clear, and we work within your budget.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="trust-image">
+                            <img src="{{ url_for('static', filename='assets/images/service/1.png') }}" alt="Trust in our expertise" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+
+                    <div class="subtitle-section">
+                        <h2>See What Our Clients<br /> Are Saying</h2>
+                    </div>
+                    <div class="read-all-container">
+                        <p class="subtitle">Real stories from satisfied clients who trusted us to create their dream
+                            spaces. Discover how we deliver excellence, one project at a time.</p>
+
+                        <a href="#" class="read-all">Read all stories <span class="arrow">→</span></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="/static/assets/images/3.png" alt="Client" class="client-image">
+                    <p class="testimonial-text">"I use YourSpace Manager for managing my rental properties, and they
+                        have been incredible. From tenant screening to maintenance, they handle everything efficiently."
+                    </p>
+                    <div class="client-info">
+                        <h4>Sarah Ahmed</h4>
+                        <p>First-time Homebuyer</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="/static/assets/images/2.png" alt="Client" class="client-image">
+                    <p class="testimonial-text">"As a first-time buyer, I had many questions, but Space Manager guided
+                        me through every step."</p>
+                    <div class="client-info">
+                        <h4>Ayesha Rahman</h4>
+                        <p>First-time Homebuyer</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="/static/assets/images/4.png" alt="Client" class="client-image">
+                    <p class="testimonial-text">"I was nervous about selling my home, but Space Manager made it so easy.
+                        Their marketing was top-notch, and I received multiple offers within days of listing."</p>
+                    <div class="client-info">
+                        <h4>Tanvir Khan</h4>
+                        <p>First-time Homebuyer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-navigation">
+                <button class="nav-arrow prev">←</button>
+                <button class="nav-arrow next">→</button>
+            </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-6">
+                    <h2>Have a project?</h2>
+                    <h2>Get in touch with us!</h2>
+                    <p class="contact-description">Have questions or ready to begin your project? Reach out to us today,
+                        and our team will guide you through every step.</p>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <p>+91 - 7983659661</p>
+                        </div>
+                        <div class="info-item">
+                            <p>hello@spacemanager.in</p>
+                        </div>
+                        <div class="info-item">
+                            <p>First floor, Sai Lok Shopping Complex, above Tit Bit's Baker,<br>
+                                Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Enter a message here..." rows="4"
+                                required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                            <label class="form-check-label" for="privacyCheck">
+                                I agree to <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Contact Us Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo and Description -->
+                <div class="footer-brand">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Space Manager Logo"
+                        class="footer-logo">
+                    <p class="footer-description">We specialize in blending creativity, innovation, and expertise to
+                        craft spaces that define elegance and functionality.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Renovation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 - 7983659661</p>
+                    <p><i class="fas fa-envelope"></i> hello@spacemanager.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> First floor, Sai Lok Shopping Complex, above Tit Bit's
+                        Baker, Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Space Manager. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Add this before the closing tag -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+</body>
