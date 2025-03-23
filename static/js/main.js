@@ -95,3 +95,23 @@ window.addEventListener('scroll', () => {
         videoWrapper.style.borderRadius = `${borderRadius}px`;
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+        const header = card.querySelector('.service-header');
+        header.addEventListener('click', () => {
+            // Close other open cards
+            serviceCards.forEach(otherCard => {
+                if (otherCard !== card && otherCard.classList.contains('active')) {
+                    otherCard.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked card
+            card.classList.toggle('active');
+        });
+    });
+});

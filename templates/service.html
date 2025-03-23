@@ -54,7 +54,7 @@
                 <div class="row align-items-center">
                     <!-- Left Side: Image -->
                     <div class="intro-section-heading col-md-6">
-                        <img src="{{ url_for('static', filename='assets/images/service/1.png') }}"
+                        <img src="{{ url_for('static', filename='assets/images/2.png') }}"
                             alt="Modern Building Design" class="img-fluid">
                     </div>
                     <!-- Right Side: Content -->
@@ -67,7 +67,7 @@
                         <p class="intro-text">Whether it's a home, office, or commercial project, we focus on pushing
                             design boundaries to create something extraordinary.</p>
                         <div class="intro-image mt-4">
-                            <img src="{{ url_for('static', filename='assets/images/service/2.png') }}"
+                            <img src="{{ url_for('static', filename='assets/images/3.png') }}"
                                 alt="Architectural Design Process" class="img-fluid">
                         </div>
                     </div>
@@ -75,33 +75,200 @@
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="services-header">
+                    <h2>Our Services</h2>
+                    <p>At SpaceManager, we turn ideas into reality by crafting spaces that inspire and elevate. Explore
+                        our range of services, each designed to bring your vision to life with creativity and precision.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Architecture Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-image">
+                                <img src="{{ url_for('static', filename='assets/images/2.png') }}"
+                                    alt="Architecture">
+                                <div class="service-overlay"></div>
+                            </div>
+                            <div class="service-title">
+                                <h3>Architecture</h3>
+                                <p>Innovative and functional architectural spaces</p>
+                                <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <p>We design innovative and functional architectural spaces that seamlessly blend aesthetics
+                                with practicality. Our team of expert architects works closely with you to create
+                                structures that are not only visually striking but also sustainable and purposeful.</p>
+                            <ul>
+                                <li>Concept development tailored to your vision</li>
+                                <li>Final blueprints with detailed specifications</li>
+                                <li>Focus on sustainability and environmental harmony</li>
+                                <li>Maximizing space efficiency for modern living</li>
+                            </ul>
+                            <p>From concept development to the final blueprint, we ensure every design is a reflection
+                                of your style and needs, while maximizing space efficiency and environmental harmony.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interiors Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-image">
+                                <img src="{{ url_for('static', filename='assets/images/3.png') }}"
+                                    alt="Interiors">
+                                <div class="service-overlay"></div>
+                            </div>
+                            <div class="service-title">
+                                <h3>Interiors</h3>
+                                <p>Bespoke interior design solutions</p>
+                                <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <p>Transform your space into a masterpiece with our bespoke interior design solutions.
+                                Whether you prefer sleek modern styles or timeless classics, we curate personalized
+                                interiors that reflect your personality and elevate your lifestyle.</p>
+                            <ul>
+                                <li>Custom color schemes and furniture selection</li>
+                                <li>Lighting design for ambiance and functionality</li>
+                                <li>Decor curation to match your personality</li>
+                                <li>Cohesive design for a captivating space</li>
+                            </ul>
+                            <p>Our meticulous design process covers everything from color schemes and furniture
+                                selection to lighting and decor, creating a cohesive and captivating ambiance tailored
+                                just for you.</p>
+                        </div>
+                    </div>
+
+                    <!-- Construction Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-image">
+                                <img src="{{ url_for('static', filename='assets/images/4.png') }}"
+                                    alt="Construction">
+                                <div class="service-overlay"></div>
+                            </div>
+                            <div class="service-title">
+                                <h3>Construction</h3>
+                                <p>End-to-end construction services</p>
+                                <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <p>Building dreams from the ground up — we offer end-to-end construction services with a
+                                focus on quality craftsmanship and attention to detail. From residential homes to
+                                commercial spaces, our construction team brings your architectural plans to life with
+                                precision, durability, and style.</p>
+                            <ul>
+                                <li>Comprehensive project planning and management</li>
+                                <li>High-quality material sourcing</li>
+                                <li>Precision execution for durability</li>
+                                <li>On-time delivery exceeding expectations</li>
+                            </ul>
+                            <p>We manage everything — planning, sourcing materials, and execution — ensuring every
+                                project is completed on time and exceeds expectations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Renovation Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-image">
+                                <img src="{{ url_for('static', filename='assets/images/2.png') }}"
+                                    alt="Renovation">
+                                <div class="service-overlay"></div>
+                            </div>
+                            <div class="service-title">
+                                <h3>Renovation</h3>
+                                <p>Expert renovation services</p>
+                                <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <p>Breathe new life into your space with our expert renovation services. Whether you're
+                                looking for a modern home makeover or a commercial upgrade, we blend creativity and
+                                functionality to revamp both interiors and exteriors.</p>
+                            <ul>
+                                <li>Modern design concepts for a fresh look</li>
+                                <li>High-quality materials for lasting results</li>
+                                <li>Functional upgrades for better usability</li>
+                                <li>Custom solutions for evolving needs</li>
+                            </ul>
+                            <p>Our team works with innovative design concepts and high-quality materials to create
+                                fresh, stylish, and efficient spaces that suit your evolving needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Landscape Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-image">
+                                <img src="{{ url_for('static', filename='assets/images/4.png') }}"
+                                    alt="Landscape">
+                                <div class="service-overlay"></div>
+                            </div>
+                            <div class="service-title">
+                                <h3>Landscape</h3>
+                                <p>Exquisite landscape solutions</p>
+                                <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <p>Extend your design vision outdoors with our exquisite landscape solutions. We craft lush,
+                                serene environments that complement your architecture and provide a perfect balance
+                                between nature and design.</p>
+                            <ul>
+                                <li>Custom garden and patio designs</li>
+                                <li>Rooftop landscapes for urban spaces</li>
+                                <li>Balanced integration of nature and design</li>
+                                <li>Functional outdoor spaces for relaxation</li>
+                            </ul>
+                            <p>From gardens and patios to rooftop landscapes, we create outdoor spaces that are both
+                                beautiful and functional — a true retreat right outside your door.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="journey-section">
             <div class="container">
                 <div class="journey-header">
                     <h2>We Guiding You Through Every Step of the Journey</h2>
-                    <p>Imagine walking into a space that feels 'just right.' That's the power of great design. We're here to make sure you experience it firsthand.</p>
+                    <p>Imagine walking into a space that feels 'just right.' That's the power of great design. We're
+                        here to make sure you experience it firsthand.</p>
                     <a href="#contact" class="consultation-btn">Book a Free Consultation</a>
                 </div>
-                
+
                 <div class="journey-cards">
                     <div class="journey-card">
-                        <img src="{{ url_for('static', filename='assets/images/service/listen.jpeg') }}" alt="We Listen">
+                        <img src="{{ url_for('static', filename='assets/images/New folder/1.png') }}"
+                            alt="We Listen">
                         <div class="journey-card-content">
                             <h3>We Listen</h3>
                             <p>Your ideas, needs, and lifestyle become the foundation of our design.</p>
                         </div>
                     </div>
-                    
+
                     <div class="journey-card">
-                        <img src="{{ url_for('static', filename='assets/images/service/create.jpeg') }}" alt="We Create">
+                        <img src="{{ url_for('static', filename='assets/images/New folder/2.png') }}"
+                            alt="We Create">
                         <div class="journey-card-content">
                             <h3>We Create</h3>
                             <p>Our team develops innovative concepts tailored to your goals.</p>
                         </div>
                     </div>
-                    
+
                     <div class="journey-card">
-                        <img src="{{ url_for('static', filename='assets/images/service/deliver.jpeg') }}" alt="We Deliver">
+                        <img src="{{ url_for('static', filename='assets/images/New folder/3.png') }}"
+                            alt="We Deliver">
                         <div class="journey-card-content">
                             <h3>We Deliver</h3>
                             <p>From blueprints to execution support, we ensure the design comes to life seamlessly.</p>
@@ -156,7 +323,9 @@
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="#contact" class="btn btn-primary" style="background-color: #8B0000; border: none; border-radius: 25px; padding: 10px 30px; margin-bottom: 100px;">Let's Design Together</a>
+                    <a href="#contact" class="btn btn-primary"
+                        style="background-color: #8B0000; border: none; border-radius: 25px; padding: 10px 30px; margin-bottom: 100px;">Let's
+                        Design Together</a>
                 </div>
             </div>
         </section>
@@ -166,8 +335,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h2>Why Trust Us with Your Dream Space?</h2>
-                        <p>We don't just design spaces—we craft lasting experiences. By blending creativity, functionality, and your vision, we deliver designs that are truly one of a kind.</p>
-                        
+                        <p>We don't just design spaces—we craft lasting experiences. By blending creativity,
+                            functionality, and your vision, we deliver designs that are truly one of a kind.</p>
+
                         <div class="trust-features">
                             <div class="trust-feature">
                                 <div class="trust-icon">
@@ -175,10 +345,11 @@
                                 </div>
                                 <div class="trust-content">
                                     <h3>Impeccable Craftsmanship</h3>
-                                    <p>Quality and luxury define our work. From furniture to accessories, we leave no detail untouched.</p>
+                                    <p>Quality and luxury define our work. From furniture to accessories, we leave no
+                                        detail untouched.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="trust-feature">
                                 <div class="trust-icon">
                                     <i class="fas fa-shield-alt"></i>
@@ -188,7 +359,7 @@
                                     <p>We stay involved throughout the project, ensuring excellence at every stage.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="trust-feature">
                                 <div class="trust-icon">
                                     <i class="fas fa-handshake"></i>
@@ -198,7 +369,7 @@
                                     <p>Your vision guides our work; we're partners, not just designers.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="trust-feature">
                                 <div class="trust-icon">
                                     <i class="fas fa-rupee-sign"></i>
@@ -210,10 +381,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-6">
                         <div class="trust-image">
-                            <img src="{{ url_for('static', filename='assets/images/service/1.png') }}" alt="Trust in our expertise" class="img-fluid">
+                            <img src="{{ url_for('static', filename='assets/images/service/1.png') }}"
+                                alt="Trust in our expertise" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -223,7 +395,9 @@
         <section class="cta-section">
             <div class="cta-content">
                 <h2 class="text-center">Your Dream Space Is Just One Step Away</h2>
-                <p class="text-center">Every great space starts with a vision. Let's create something beautiful, functional, and inspiring—together. Start today, and experience how expert design transforms the way you live and work.</p>
+                <p class="text-center">Every great space starts with a vision. Let's create something beautiful,
+                    functional, and inspiring—together. Start today, and experience how expert design transforms the way
+                    you live and work.</p>
                 <a href="#contact" class="cta-button">Let's Talk About Your Project</a>
             </div>
         </section>
