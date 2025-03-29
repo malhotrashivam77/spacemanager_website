@@ -1,0 +1,248 @@
+/* Inherit base styles from architecture.css */
+@import url('architecture.css');
+
+/* Renovation-specific styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/static/assets/images/renovation/hero-bg.jpg');
+    height: 100vh;
+}
+
+/* Color scheme override for renovation theme */
+.approach-card .icon {
+    color: #9A0000; /* Renovation blue */
+}
+
+.btn-primary, 
+.consultation-btn,
+.cta-button {
+    background-color: #9A0000;
+    border-color: #9A0000;
+}
+
+.btn-primary:hover, 
+.consultation-btn:hover,
+.cta-button:hover {
+    background-color: #357ABD;
+    border-color: #357ABD;
+}
+
+/* Renovation-specific sections */
+.approach-section {
+    background-color: #F7F7F7; /* Light gray for industrial feel */
+}
+
+.vision-section .image-frame {
+    background: #EFEFEF;
+    border: 2px solid #E0E0E0;
+}
+
+/* Custom elements for renovation */
+.progress-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.progress-timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #9A0000;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    position: relative;
+}
+
+.timeline-number {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #9A0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-number {
+    transform: scale(1.1);
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+    color: #9A0000;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Timeline Section Enhancement */
+.timeline-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, #f8f9fa 0%, #fff 100%);
+}
+
+.timeline-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Equipment showcase section */
+.equipment-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.equipment-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.equipment-card:hover {
+    transform: translateY(-10px);
+}
+
+.equipment-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #9A0000;
+    transition: all 0.3s ease;
+}
+
+.equipment-card:hover .equipment-icon {
+    background: #9A0000;
+    color: white;
+}
+
+.equipment-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.equipment-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.equipment-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.equipment-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.equipment-features li:last-child {
+    border-bottom: none;
+}
+
+.equipment-features li::before {
+    content: '✓';
+    color: #9A0000;
+}
+/* Responsive adjustments for Renovation Process section */
+@media (max-width: 768px) {
+    .progress-timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 40px; /* Adjust padding for better spacing */
+    }
+
+    .timeline-number {
+        position: relative; /* Change position to relative */
+        left: auto; /* Reset left positioning */
+        top: -20px; /* Position it just above the card */
+        margin: 0 auto 10px; /* Center align and add spacing */
+        transform: none; /* Remove transform for proper alignment */
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        padding-top: 30px; /* Further adjust padding for smaller screens */
+    }
+
+    .timeline-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: -15px; /* Adjust position for smaller screens */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+}

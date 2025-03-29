@@ -14,20 +14,41 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand " href="#"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="spacemanger_logo"></a>
+            <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='assets/logo.png') }}"
+                    alt="spacemanger_logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('service') }}">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('service') }}">All Services</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('architecture') }}">Architecture</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('interior') }}">Interior</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('construction') }}">Construction</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('renovation') }}">Renovation</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('landscape') }}">Landscape</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"><button class="hero-button btn btn-light btn-lg" style="border-radius: 20px;">Get a Consultation</button></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><button
+                                class="hero-button btn btn-light btn-lg" style="border-radius: 20px;">Get a
+                                Consultation</button></a></li>
                 </ul>
             </div>
         </div>
@@ -74,7 +95,8 @@
                             <span class="number">500</span><span class="symbol">+</span>
                         </div>
                         <h6>Successful Projects Delivered</h6>
-                        <p class="stat-description">Successfully completing projects that transform spaces and exceed client expectations.</p>
+                        <p class="stat-description">Successfully completing projects that transform spaces and exceed
+                            client expectations.</p>
                     </div>
                     <!-- Number 2 -->
                     <div class="col-md-3">
@@ -82,7 +104,8 @@
                             <span class="number">100</span><span class="symbol">%</span>
                         </div>
                         <h6>Customer Satisfaction Rate</h6>
-                        <p class="stat-description">We take pride in achieving full satisfaction on every project, every time.</p>
+                        <p class="stat-description">We take pride in achieving full satisfaction on every project, every
+                            time.</p>
                     </div>
                     <!-- Number 3 -->
                     <div class="col-md-3">
@@ -90,7 +113,8 @@
                             <span class="number">25</span><span class="symbol">+</span>
                         </div>
                         <h6>Years of Industry Experience</h6>
-                        <p class="stat-description">Leveraging decades of experience to deliver top-tier construction solutions.</p>
+                        <p class="stat-description">Leveraging decades of experience to deliver top-tier construction
+                            solutions.</p>
                     </div>
                     <!-- Number 4 -->
                     <div class="col-md-3">
@@ -98,7 +122,8 @@
                             <span class="number">50</span><span class="symbol">+</span>
                         </div>
                         <h6>Awards and Recognitions</h6>
-                        <p class="stat-description">Recognized for our innovation, quality, and dedication to excellence.</p>
+                        <p class="stat-description">Recognized for our innovation, quality, and dedication to
+                            excellence.</p>
                     </div>
                 </div>
             </div>
@@ -124,7 +149,8 @@
                                 </div>
                             </div>
                             <div class="image-col">
-                                <img src="{{ url_for('static', filename='assets/images/2.png') }}" alt="Architectural Blueprint">
+                                <img src="{{ url_for('static', filename='assets/images/2.png') }}"
+                                    alt="Architectural Blueprint">
                             </div>
                         </div>
                     </div>
@@ -144,7 +170,8 @@
                                 </div>
                             </div>
                             <div class="image-col">
-                                <img src="{{ url_for('static', filename='assets/images/3.png') }}" alt="Construction Site">
+                                <img src="{{ url_for('static', filename='assets/images/3.png') }}"
+                                    alt="Construction Site">
                             </div>
                         </div>
                     </div>
@@ -164,7 +191,8 @@
                                 </div>
                             </div>
                             <div class="image-col">
-                                <img src="{{ url_for('static', filename='assets/images/4.png') }}" alt="Interior Design">
+                                <img src="{{ url_for('static', filename='assets/images/4.png') }}"
+                                    alt="Interior Design">
                             </div>
                         </div>
                     </div>
@@ -184,25 +212,32 @@
                 <div class="awards-slider">
                     <div class="awards-track">
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/idac-logo.png') }}" alt="IDAC Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/idac-logo.png') }}"
+                                alt="IDAC Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/cwab-logo.png') }}" alt="CWAB Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/cwab-logo.png') }}"
+                                alt="CWAB Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/idac2-logo.png') }}" alt="IDAC Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/idac2-logo.png') }}"
+                                alt="IDAC Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/architecture-logo.png') }}" alt="Architecture Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/architecture-logo.png') }}"
+                                alt="Architecture Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/cwab2-logo.png') }}" alt="CWAB Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/cwab2-logo.png') }}"
+                                alt="CWAB Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/idac3-logo.png') }}" alt="IDAC Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/idac3-logo.png') }}"
+                                alt="IDAC Award">
                         </div>
                         <div class="award-logo">
-                            <img src="{{ url_for('static', filename='assets/images/awards/architecture2-logo.png') }}" alt="Architecture Award">
+                            <img src="{{ url_for('static', filename='assets/images/awards/architecture2-logo.png') }}"
+                                alt="Architecture Award">
                         </div>
                     </div>
                 </div>
@@ -226,103 +261,113 @@
         <section class="testimonials-section">
             <div class="container">
                 <div class="section-header">
-                    
+
                     <div class="subtitle-section">
-                        <h2>See What Our Clients<br/> Are Saying</h2>
+                        <h2>See What Our Clients<br /> Are Saying</h2>
                     </div>
                     <div class="read-all-container">
-                        <p class="subtitle">Real stories from satisfied clients who trusted us to create their dream spaces. Discover how we deliver excellence, one project at a time.</p>
-                    
+                        <p class="subtitle">Real stories from satisfied clients who trusted us to create their dream
+                            spaces. Discover how we deliver excellence, one project at a time.</p>
+
                         <a href="#" class="read-all">Read all stories <span class="arrow">→</span></a>
                     </div>
-                    
-                    </div>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <img src="{{ url_for('static', filename='assets/images/3.png') }}" alt="Client" class="client-image">
-                        <p class="testimonial-text">"I use YourSpace Manager for managing my rental properties, and they have been incredible. From tenant screening to maintenance, they handle everything efficiently."</p>
-                        <div class="client-info">
-                            <h4>Sarah Ahmed</h4>
-                            <p>First-time Homebuyer</p>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <img src="{{ url_for('static', filename='assets/images/2.png') }}" alt="Client" class="client-image">
-                        <p class="testimonial-text">"As a first-time buyer, I had many questions, but Space Manager guided me through every step."</p>
-                        <div class="client-info">
-                            <h4>Ayesha Rahman</h4>
-                            <p>First-time Homebuyer</p>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <img src="{{ url_for('static', filename='assets/images/4.png') }}" alt="Client" class="client-image">
-                        <p class="testimonial-text">"I was nervous about selling my home, but Space Manager made it so easy. Their marketing was top-notch, and I received multiple offers within days of listing."</p>
-                        <div class="client-info">
-                            <h4>Tanvir Khan</h4>
-                            <p>First-time Homebuyer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-navigation">
-                    <button class="nav-arrow prev">←</button>
-                    <button class="nav-arrow next">→</button>
-                </div>
-            </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Column -->
-                    <div class="col-md-6">
-                        <h2>Have a project?</h2>
-                        <h2>Get in touch with us!</h2>
-                        <p class="contact-description">Have questions or ready to begin your project? Reach out to us today, and our team will guide you through every step.</p>
-                        
-                        <div class="contact-info">
-                            <div class="info-item">
-                                <p>+91 - 7983659661</p>
-                            </div>
-                            <div class="info-item">
-                                <p>hello@spacemanager.in</p>
-                            </div>
-                            <div class="info-item">
-                                <p>First floor, Sai Lok Shopping Complex, above Tit Bit's Baker,<br>
-                                Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="{{ url_for('static', filename='assets/images/3.png') }}" alt="Client"
+                        class="client-image">
+                    <p class="testimonial-text">"I use YourSpace Manager for managing my rental properties, and they
+                        have been incredible. From tenant screening to maintenance, they handle everything efficiently."
+                    </p>
+                    <div class="client-info">
+                        <h4>Sarah Ahmed</h4>
+                        <p>First-time Homebuyer</p>
                     </div>
-                    
-                    <!-- Right Column - Contact Form -->
-                    <div class="col-md-6">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Enter a message here..." rows="4" required></textarea>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-                                <label class="form-check-label" for="privacyCheck">
-                                    I agree to <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Contact Us Now</button>
-                        </form>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="{{ url_for('static', filename='assets/images/2.png') }}" alt="Client"
+                        class="client-image">
+                    <p class="testimonial-text">"As a first-time buyer, I had many questions, but Space Manager guided
+                        me through every step."</p>
+                    <div class="client-info">
+                        <h4>Ayesha Rahman</h4>
+                        <p>First-time Homebuyer</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="{{ url_for('static', filename='assets/images/4.png') }}" alt="Client"
+                        class="client-image">
+                    <p class="testimonial-text">"I was nervous about selling my home, but Space Manager made it so easy.
+                        Their marketing was top-notch, and I received multiple offers within days of listing."</p>
+                    <div class="client-info">
+                        <h4>Tanvir Khan</h4>
+                        <p>First-time Homebuyer</p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="testimonial-navigation">
+                <button class="nav-arrow prev">←</button>
+                <button class="nav-arrow next">→</button>
+            </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-6">
+                    <h2>Have a project?</h2>
+                    <h2>Get in touch with us!</h2>
+                    <p class="contact-description">Have questions or ready to begin your project? Reach out to us today,
+                        and our team will guide you through every step.</p>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <p>+91 - 7983659661</p>
+                        </div>
+                        <div class="info-item">
+                            <p>hello@spacemanager.in</p>
+                        </div>
+                        <div class="info-item">
+                            <p>First floor, Sai Lok Shopping Complex, above Tit Bit's Baker,<br>
+                                Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Enter a message here..." rows="4"
+                                required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                            <label class="form-check-label" for="privacyCheck">
+                                I agree to <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Contact Us Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     </div>
     <!-- Footer Section -->
@@ -331,8 +376,10 @@
             <div class="footer-content">
                 <!-- Logo and Description -->
                 <div class="footer-brand">
-                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Space Manager Logo" class="footer-logo">
-                    <p class="footer-description">We specialize in blending creativity, innovation, and expertise to craft spaces that define elegance and functionality.</p>
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Space Manager Logo"
+                        class="footer-logo">
+                    <p class="footer-description">We specialize in blending creativity, innovation, and expertise to
+                        craft spaces that define elegance and functionality.</p>
                     <div class="social-icons">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -370,7 +417,8 @@
                     <h4>Contact Info</h4>
                     <p><i class="fas fa-phone"></i> +91 - 7983659661</p>
                     <p><i class="fas fa-envelope"></i> hello@spacemanager.in</p>
-                    <p><i class="fas fa-map-marker-alt"></i> First floor, Sai Lok Shopping Complex, above Tit Bit's Baker, Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                    <p><i class="fas fa-map-marker-alt"></i> First floor, Sai Lok Shopping Complex, above Tit Bit's
+                        Baker, Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
                 </div>
             </div>
 

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Manager | Architecture</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/architecture.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="spacemanger_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('service') }}">All Services</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('architecture') }}">Architecture</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('interior') }}">Interior</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('construction') }}">Construction</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('renovation') }}">Renovation</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('landscape') }}">Landscape</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><button class="hero-button btn btn-light btn-lg" style="border-radius: 20px;">Get a Consultation</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Where Vision Takes Shape</h1>
+                <p class="lead">Architectural Excellence by Spacemanager</p>
+                <h2 class="hero-tagline">Building Your Vision, Brick by Inspired Brick</h2>
+                <a href="#contact" class="hero-button btn btn-light btn-lg">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="architecture-page">
+        <!-- Vision Section -->
+        <section class="vision-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Dream it. Design it. Dwell in it.</h2>
+                        <p>At Spacemanager, we believe architecture is more than just walls and roofs; it's about crafting experiences. We blend innovative design with practical functionality to create spaces that inspire.</p>
+                        <p>Our expert architects meticulously consider every aspect, from spatial flow to sustainable materials, ensuring your project is not only visually stunning but also built for longevity.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-frame">
+                            <img src="{{ url_for('static', filename='assets/images/architecture/vision.jpg') }}" alt="Architectural Vision" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section class="approach-section">
+            <div class="container">
+                <h2>Our Approach</h2>
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <h3>Conceptual Design</h3>
+                        <p>We start by understanding your unique vision and translating it into compelling architectural concepts.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="icon"><i class="fas fa-tasks"></i></div>
+                        <h3>Detailed Planning</h3>
+                        <p>Our comprehensive planning ensures every detail is accounted for, from structural integrity to aesthetic appeal.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Sustainable Practices</h3>
+                        <p>We prioritize eco-friendly solutions, creating spaces that are both beautiful and responsible.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Project Management</h3>
+                        <p>Our team manages every stage, ensuring seamless execution and timely delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase Section -->
+        <section class="project-showcase">
+            <div class="container">
+                <h2>Featured Architecture</h2>
+                <p class="section-subtitle">Explore our signature projects in 3D</p>
+                <div class="project-cards">
+                    <div class="project-card" data-tilt data-tilt-max="10">
+                        <div class="project-image">
+                            <img src="{{ url_for('static', filename='assets/images/architecture/project1.jpg') }}" alt="Modern House">
+                            <div class="project-overlay">
+                                <span class="project-category">Residential</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Modern Villa Design</h3>
+                            <p>Contemporary living spaces with sustainable features</p>
+                            <a href="#" class="view-project">Explore in 3D <i class="fas fa-cube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Add 3 more project cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Section -->
+        <section class="interactive-section">
+            <div class="container">
+                <div class="model-viewer">
+                    <model-viewer 
+                        src="{{ url_for('static', filename='assets/models/building.glb') }}"
+                        alt="3D building model"
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="1">
+                    </model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Philosophy Section -->
+        <section class="design-philosophy-section">
+            <div class="container">
+                <h2>Design Philosophy</h2>
+                <p class="section-subtitle">Where Form Meets Function</p>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-compass"></i></div>
+                        <h3>Sustainable Design</h3>
+                        <p>Creating eco-conscious spaces that minimize environmental impact while maximizing comfort and efficiency.</p>
+                        <ul class="philosophy-features">
+                            <li>Energy-efficient Solutions</li>
+                            <li>Sustainable Materials</li>
+                            <li>Green Building Practices</li>
+                        </ul>
+                    </div>
+                    <!-- Add 3 more philosophy cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Architectural Expertise Section -->
+        <section class="architectural-expertise">
+            <div class="container">
+                <div class="expertise-header">
+                    <h2>Our Architectural Expertise</h2>
+                    <p class="section-subtitle">Specialized Solutions for Every Project Type</p>
+                </div>
+                <div class="expertise-slider">
+                    <!-- Add sliding cards for different project types -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Capabilities Section -->
+        <section class="technical-capabilities">
+            <div class="container">
+                <div class="capabilities-grid">
+                    <div class="capability-text">
+                        <h2>Technical Excellence</h2>
+                        <p>Our architectural solutions combine innovative design with technical precision.</p>
+                        <ul class="capability-list">
+                            <li><span>3D Visualization</span> - Photorealistic renderings and walkthroughs</li>
+                            <li><span>BIM Integration</span> - Advanced building information modeling</li>
+                            <li><span>Sustainable Design</span> - LEED-certified approaches</li>
+                            <!-- Add more capabilities -->
+                        </ul>
+                    </div>
+                    <div class="capability-image">
+                        <!-- Add technical drawing or 3D render -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="portfolio-grid">
+                    <!-- Add your portfolio items here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <h2>Have a project?</h2>
+                        <h2>Get in touch with us!</h2>
+                        <p class="contact-description">Have questions or ready to begin your project? Reach out to us today, and our team will guide you through every step.</p>
+
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <p>+91 - 7983659661</p>
+                            </div>
+                            <div class="info-item">
+                                <p>hello@spacemanager.in</p>
+                            </div>
+                            <div class="info-item">
+                                <p>First floor, Sai Lok Shopping Complex, above Tit Bit's Baker,<br>
+                                    Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Contact Form -->
+                    <div class="col-md-6">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Enter a message here..." rows="4" required></textarea>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                                <label class="form-check-label" for="privacyCheck">
+                                    I agree to <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Contact Us Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo and Description -->
+                <div class="footer-brand">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Space Manager Logo" class="footer-logo">
+                    <p class="footer-description">We specialize in blending creativity, innovation, and expertise to craft spaces that define elegance and functionality.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Renovation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 - 7983659661</p>
+                    <p><i class="fas fa-envelope"></i> hello@spacemanager.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> First floor, Sai Lok Shopping Complex, above Tit Bit's Baker, Indra Nagar Colony, Dehradun, Uttarakhand 248007</p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Space Manager. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1285,3 +1285,38 @@ textarea.form-control {
         font-size: 1rem;
     }
 }
+/* Dropdown menu styles with blur translucent background */
+.navbar .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: #333;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+    color: #000;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .navbar .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    .navbar .dropdown-menu .dropdown-item {
+        text-align: center;
+    }
+}

@@ -1,0 +1,237 @@
+/* Inherit base styles from architecture.css */
+@import url('architecture.css');
+
+/* Interior-specific styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('/static/assets/images/interior/hero-bg.jpg');
+    height: 100vh;
+}
+
+/* Color scheme override */
+.approach-card .icon {
+    color: #BE8A60; /* Warm gold for interior design */
+}
+
+.btn-primary, 
+.consultation-btn,
+.cta-button {
+    background-color: #BE8A60;
+    border-color: #BE8A60;
+}
+
+.btn-primary:hover, 
+.consultation-btn:hover,
+.cta-button:hover {
+    background-color: #A67748;
+    border-color: #A67748;
+}
+
+/* Interior-specific sections */
+.approach-section {
+    background-color: #F5EFE6; /* Lighter warm beige */
+}
+
+.vision-section .image-frame {
+    background: #F5EFE6;
+}
+
+/* Portfolio section customization */
+.portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Custom elements for interior design */
+.material-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.material-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.material-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Design Process Section */
+.design-process-section {
+    padding: 80px 0;
+    background: linear-gradient(to right, #F5EFE6 0%, #fff 100%);
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #BE8A60;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    position: relative;
+}
+
+.process-number {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #BE8A60;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(190, 138, 96, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.process-item:hover .process-number {
+    transform: scale(1.1);
+}
+
+.process-content {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.process-content:hover {
+    transform: translateY(-5px);
+}
+
+.process-content h3 {
+    color: #BE8A60;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Design Elements Section */
+.design-elements-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.element-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #F5EFE6;
+}
+
+.element-card:hover {
+    transform: translateY(-10px);
+}
+
+.element-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: rgba(190, 138, 96, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #BE8A60;
+    transition: all 0.3s ease;
+}
+
+.element-card:hover .element-icon {
+    background: #BE8A60;
+    color: white;
+}
+
+.element-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.element-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #F5EFE6;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.element-features li:last-child {
+    border-bottom: none;
+}
+
+.element-features li::before {
+    content: '✓';
+    color: #BE8A60;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .material-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .process-item {
+        padding-left: 0;
+        padding-top: 60px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .process-number {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .elements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .material-showcase {
+        grid-template-columns: 1fr;
+    }
+}

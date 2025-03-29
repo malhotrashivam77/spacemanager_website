@@ -1,0 +1,311 @@
+@import url('construction.css');
+
+/* Landscape-specific styles */
+:root {
+    --landscape-primary: #FF6B35;    /* Changed to construction orange */
+    --landscape-secondary: #E85A2A;   /* Changed to darker orange */
+    --landscape-accent: #FF8B60;      /* Changed to light orange */
+    --landscape-light: #F7F7F7;       /* Changed to match construction */
+    --landscape-text: #333333;
+}
+
+/* Premium Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('/static/assets/images/landscape/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+} */
+
+.hero-content .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--landscape-text);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--landscape-primary);
+}
+
+/* Nature-Inspired Elements */
+.nature-element {
+    position: absolute;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Premium Service Cards */
+.landscape-services {
+    padding: 100px 0;
+    background: linear-gradient(45deg, var(--landscape-light) 0%, #fff 100%);
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    color: var(--landscape-primary);  /* Changed to match construction */
+    font-size: 1.4rem;
+}
+
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.btn-landscape {
+    background: var(--landscape-primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-landscape:hover {
+    background: var(--landscape-secondary);
+    color: white;
+}
+
+.service-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(46, 125, 50, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-card:hover .service-image::after {
+    opacity: 1;
+}
+
+/* Gallery Enhancement */
+.nature-gallery {
+    padding: 100px 0;
+    background: linear-gradient(45deg, var(--landscape-light) 0%, #fff 100%);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Design Elements Enhancement */
+.design-elements {
+    background: linear-gradient(135deg, var(--landscape-light) 0%, white 100%);
+    padding: 100px 0;
+}
+
+.element-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.element-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Interactive Elements */
+.plant-showcase {
+    position: relative;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.plant-card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plant-card:hover {
+    transform: rotateY(180deg);
+}
+
+/* Introduction Section */
+.intro-section {
+    background: white;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--landscape-text);
+}
+
+/* Approach Section */
+.approach-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.approach-card:hover {
+    transform: translateY(-10px);
+}
+
+.approach-icon {
+    font-size: 2.5rem;
+    color: var(--landscape-primary);  /* Changed to match construction orange */
+    margin-bottom: 1.5rem;
+}
+
+.approach-card h3 {
+    font-size: 1.4rem;
+    color: #333;  /* Changed to match construction */
+    margin-bottom: 1rem;
+}
+
+.approach-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--landscape-accent);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .plant-showcase {
+        height: 300px;
+    }
+}
+
+/* Premium Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
